@@ -1,0 +1,18 @@
+# ── Manipulação de dados ───────────────────────────────────────────────────────
+pandas
+numpy
+
+# ── Visualização ───────────────────────────────────────────────────────────────
+matplotlib
+seaborn
+
+# ── Machine Learning ───────────────────────────────────────────────────────────
+scikit-learn
+
+# ── Banco de dados ─────────────────────────────────────────────────────────────
+# sqlite3 faz parte da biblioteca padrão do Python — não precisa ser instalado
+
+# ── Ambiente de notebook ───────────────────────────────────────────────────────
+jupyter
+notebook
+ipykernel
