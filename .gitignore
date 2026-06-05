@@ -39,3 +39,11 @@ desktop.ini
 .env.*
 *.pem
 *.key
+
+# ── Modelos treinados ──────────────────────────────────────────────────────────
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+freight_cost_prediction/models/
