@@ -1,7 +1,8 @@
-from sklearn.linear_model import LinearRegression 
+from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, root_mean_squared_error, r2_score
+from sklearn.metrics import accuracy_score, classification_report
 
 def train_linear_regression(X_train, y_train): 
     model = LinearRegression() 
@@ -17,6 +18,22 @@ def train_random_forest(X_train, y_train, max_depth=6):
     model = RandomForestRegressor(max_depth=max_depth, random_state=42)
     model.fit(X_train, y_train)
     return model
+
+
+def evaluate_classifier(model, X_test, y_test, model_name: str) -> dict:
+    preds = model.predict(X_test)
+
+    accuracy = accuracy_score(y_test, preds)
+
+    print(f"\n{model_name} Performance:")
+    print(f"Accuracy : {accuracy:.2f}")
+    print("Classification Report :")
+    print(classification_report(y_test, preds))
+
+    return {
+        "model_name": model_name,
+        "accuracy": accuracy,
+    }
 
 
 def evaluate_model(model, X_test, y_test, model_name: str) -> dict:
